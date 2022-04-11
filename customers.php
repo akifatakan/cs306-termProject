@@ -1,11 +1,124 @@
+<?php
+    include "filter_customers.php";
+    if(!defined("URL"))
+    {
+        define("URL","customers.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
         <title>Customers</title>
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="tab.css">
     </head>
     <body align="center">
         <h1>CUSTOMERS</h1><br><br>
+        <button class="tablink" onclick="tabFilter()">Press if you want to filter!</button>
+        <div id="tab--content">
+            <form id="filter--form" action="<?php echo URL; ?>" method="post">
+                <label for="click">I want to enter id range</label>
+                <input id="idCheckbox" name="click" type="checkbox"/>
+                <div id="filter--form__id" class="clearfix form-div active" >
+                    <label for="cid">Customer ID:</label>
+                    <input type="text" name="cid" placeholder="1">
+                    <select name="cid-option" id="cid-option">
+                        <option value="=">Equals to</option>
+                        <option value=">">Greater than</option>
+                        <option value="<">Less than</option>
+                        <option value=">=">Greater or Equals to</option>
+                        <option value="<=">Less or Equals to</option>
+                    </select>
+
+                </div>
+                <div id="filter--form__id2" class="clearfix form-div">
+                    <label for="cid">Customer ID:</label>
+                    <input type="text" name="cid1" placeholder="1">
+                    <span> - </span>
+                    <input type="text" name="cid2" placeholder="53">
+
+                </div>
+                <div class="clearfix form-div">
+                    <label for="cid">Name:</label>
+
+                    <input type="text" name="cname" placeholder="John">
+                    <select name="cname-option" id="cname-option">
+                        <option value="c">Contains</option>
+                        <option value="eq">Equals to</option>
+                        <option value="s">Starts with</option>
+                        <option value="en">Ends with</option>
+                    </select>
+                </div>
+                <div class="clearfix form-div">
+                    <label for="cid">Surname:</label>
+
+                    <input type="text" name="csurname" placeholder="Dilemma">
+                    <select name="csurname-option" id="csurname-option">
+                        <option value="c">Contains</option>
+                        <option value="eq">Equals to</option>
+                        <option value="s">Starts with</option>
+                        <option value="en">Ends with</option>
+                    </select>                 
+                </div>
+                <label for="click">I want to enter age range</label>
+                <input id="ageCheckbox" name="click" type="checkbox"/>
+                <div id="filter--form__age" class="clearfix form-div filter--form__age active">
+                    <label for="cid">Age:</label>
+
+                    <input type="text" name="age" placeholder="21">
+                    <select name="age-option" id="cid-option">
+                        <option value="=">Equals to</option>
+                        <option value=">">Greater than</option>
+                        <option value="<">Less than</option>
+                        <option value=">=">Greater or Equals to</option>
+                        <option value="<=">Less or Equals to</option>
+                    </select>                  
+                </div>
+                <div id="filter--form__age2" class="clearfix form-div">
+                    <label for="cid">Age Range:</label>
+                    <input type="text" name="age1" placeholder="1">
+                    <span> - </span>
+                    <input type="text" name="age2" placeholder="35">
+
+                </div>
+                <div class="clearfix form-div">
+                    <label for="cid">SSN:</label>
+
+                    <input type="text" name="ssn" placeholder="12341252120">
+                    <select name="ssn-option" id="ssn-option">
+                        <option value="c">Contains</option>
+                        <option value="eq">Equals to</option>
+                        <option value="s">Starts with</option>
+                        <option value="en">Ends with</option>
+                    </select>              
+                </div>
+                <div class="clearfix form-div">
+                    <label for="cid">Phone Number:</label>
+
+                    <input type="text" name="telephone" placeholder="5455021593">
+                    <select name="telephone-option" id="telephone-option">
+                        <option value="c">Contains</option>
+                        <option value="eq">Equals to</option>
+                        <option value="s">Starts with</option>
+                        <option value="en">Ends with</option>
+                    </select>             
+                </div>
+                <div class="clearfix form-div">
+                    <label for="cid">Email:</label>
+
+                    <input type="text" name="mail" placeholder="example@database.com">
+                    <select name="mail-option" id="mail-option">
+                        <option value="c">Contains</option>
+                        <option value="eq">Equals to</option>
+                        <option value="s">Starts with</option>
+                        <option value="en">Ends with</option>
+                    </select>
+                </div>
+                <input type="submit" name="search" value="Filter"><br><br>
+            </form>
+        </div>
+        
         <table>
             <tr>
                 <th>ID</th>
@@ -20,9 +133,7 @@
             </tr>
 
             <?php 
-                include "config.php";
-                $sql_statement = "SELECT * FROM customers";
-                $result = mysqli_query($db, $sql_statement);
+                
 
                 while($row = mysqli_fetch_assoc($result)){
                     $id = $row['cid'];
@@ -39,5 +150,8 @@
             ?>
         </table>
         <a href="index.php"><button class="button-7" role="button">Go to Home Page</button></a>
+        <script src="tab.js">
+            </script>
+
     </body>
 </html>

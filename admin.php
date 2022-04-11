@@ -1,3 +1,8 @@
+<?php
+    define("URL","admin.php");
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
