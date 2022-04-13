@@ -15,7 +15,7 @@
     </head>
     <body align="center">
         <h1>CUSTOMERS</h1><br><br>
-        <button class="tablink" onclick="tabFilter()">Press if you want to filter!</button>
+        <button class="tablink button-7" onclick="tabFilter()">Press if you want to filter!</button>
         <div id="tab--content">
             <form id="filter--form" action="<?php echo URL; ?>" method="post">
                 <label for="click">I want to enter id range</label>

@@ -12,7 +12,6 @@
     <body>
         <?php include "config.php";?>
         
-        <a href="index.php"><button class="button-7" role="button">Go to Home Page</button></a>
         
         <?php include "customers.php"; ?>  
         <form action="deleteCustomer.php" method="POST">
