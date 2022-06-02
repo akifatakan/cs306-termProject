@@ -23,6 +23,12 @@
             <li >
                 <a href="javascript:void('customers.php');">See Customers</a>
             </li>
+           <li >
+                <a href="javascript:void('workerForm.php');"></i>New Worker</a>
+            </li>
+            <li >
+                <a href="javascript:void('workers.php');">See Workers</a>
+            </li>
             <li>
                 <a href="javascript:void('admin.php');">Admin Page</a>
             </li>

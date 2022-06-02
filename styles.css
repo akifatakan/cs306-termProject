@@ -1,4 +1,5 @@
 #content input[type=text],
+#content input[type=number],
 #content select {
     width: 50%;
     padding: 12px 20px;
