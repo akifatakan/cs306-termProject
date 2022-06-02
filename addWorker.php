@@ -12,7 +12,6 @@ if(!empty($_POST['worker_name'])){
     $worker_role = $_POST['worker_role'];
 
     $sql_statement = "INSERT INTO workers(worker_name, worker_surname, worker_ssn, gender, age, salary, worker_role) VALUES ('$worker_name', '$worker_surname', '$worker_ssn', '$gender', $age, $salary, '$worker_role')";
-    echo "<h2>" . $sql_statement . "</h2>";
     $result = mysqli_query($db, $sql_statement);
     header("Location: index.php");
 }
