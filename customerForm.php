@@ -39,7 +39,7 @@
                 
                 <input type="submit" value="Submit">
             </form>
-            <a href="index.php"><button class="button-7" role="button">Go to Home Page</button></a>
+            
         </div>
     </body>
 </html>

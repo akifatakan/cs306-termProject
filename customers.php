@@ -18,10 +18,14 @@
         <button class="tablink button-7" onclick="tabFilter()">Press if you want to filter!</button>
         <div id="tab--content">
             <form id="filter--form" action="<?php echo URL; ?>" method="post">
+            
                 <label for="click">I want to enter id range</label>
                 <input id="idCheckbox" name="click" type="checkbox"/>
                 <div id="filter--form__id" class="clearfix form-div active" >
-                    <label for="cid">Customer ID:</label>
+                    <div class="label-div">
+                        <label for="cid">Customer ID:</label>
+
+                    </div>
                     <input type="text" name="cid" placeholder="1">
                     <select name="cid-option" id="cid-option">
                         <option value="=">Equals to</option>
@@ -30,17 +34,24 @@
                         <option value=">=">Greater or Equals to</option>
                         <option value="<=">Less or Equals to</option>
                     </select>
-
+                    
                 </div>
                 <div id="filter--form__id2" class="clearfix form-div">
+                    <div class="label-div">
                     <label for="cid">Customer ID:</label>
+
+                    </div>
                     <input type="text" name="cid1" placeholder="1">
                     <span> - </span>
                     <input type="text" name="cid2" placeholder="53">
 
                 </div>
                 <div class="clearfix form-div">
+                    <div class="label-div">
                     <label for="cid">Name:</label>
+
+                    </div>
+
 
                     <input type="text" name="cname" placeholder="John">
                     <select name="cname-option" id="cname-option">
@@ -51,7 +62,10 @@
                     </select>
                 </div>
                 <div class="clearfix form-div">
+                    <div class="label-div">
                     <label for="cid">Surname:</label>
+
+                    </div>
 
                     <input type="text" name="csurname" placeholder="Dilemma">
                     <select name="csurname-option" id="csurname-option">
@@ -64,7 +78,11 @@
                 <label for="click">I want to enter age range</label>
                 <input id="ageCheckbox" name="click" type="checkbox"/>
                 <div id="filter--form__age" class="clearfix form-div filter--form__age active">
+                    <div class="label-div">
                     <label for="cid">Age:</label>
+
+                    </div>
+
 
                     <input type="text" name="age" placeholder="21">
                     <select name="age-option" id="cid-option">
@@ -76,14 +94,22 @@
                     </select>                  
                 </div>
                 <div id="filter--form__age2" class="clearfix form-div">
+                    <div class="label-div">
                     <label for="cid">Age Range:</label>
+
+                    </div>
+
                     <input type="text" name="age1" placeholder="1">
                     <span> - </span>
                     <input type="text" name="age2" placeholder="35">
 
                 </div>
                 <div class="clearfix form-div">
+                    <div class="label-div">
                     <label for="cid">SSN:</label>
+
+                    </div>
+
 
                     <input type="text" name="ssn" placeholder="12341252120">
                     <select name="ssn-option" id="ssn-option">
@@ -94,7 +120,11 @@
                     </select>              
                 </div>
                 <div class="clearfix form-div">
+                    <div class="label-div">
                     <label for="cid">Phone Number:</label>
+
+                    </div>
+
 
                     <input type="text" name="telephone" placeholder="5455021593">
                     <select name="telephone-option" id="telephone-option">
@@ -105,7 +135,11 @@
                     </select>             
                 </div>
                 <div class="clearfix form-div">
+                    <div class="label-div">
                     <label for="cid">Email:</label>
+
+                    </div>
+
 
                     <input type="text" name="mail" placeholder="example@database.com">
                     <select name="mail-option" id="mail-option">
@@ -149,7 +183,7 @@
                 }
             ?>
         </table>
-        <a href="index.php"><button class="button-7" role="button">Go to Home Page</button></a>
+        
         <script src="tab.js">
             </script>
 
