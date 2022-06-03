@@ -1,10 +1,10 @@
-<?php 
+<?php
 
 include "config.php";
 
-if(!empty($_POST['cid'])){
-    $selection_id = $_POST['cid'];
-    $sql_statement = "DELETE FROM customers WHERE cid = $selection_id";
+if(!empty($_POST['wid'])){
+    $selection_id = $_POST['wid'];
+    $sql_statement = "DELETE FROM workers WHERE wid = $selection_id";
     $result = mysqli_query($db, $sql_statement);
 
     header("Location: index.php");

@@ -1,11 +1,7 @@
 <?php
     include "config.php";
 
-    function addAndToQ($state)
-    {
-        $state = "".$state." AND";
-        return $state;
-    }
+
 
     if(isset($_POST["search"]))
     {

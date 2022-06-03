@@ -1,10 +1,10 @@
-<?php 
+<?php
 
 include "config.php";
 
-if(!empty($_POST['cid'])){
-    $selection_id = $_POST['cid'];
-    $sql_statement = "DELETE FROM customers WHERE cid = $selection_id";
+if(!empty($_POST['bid'])){
+    $selection_id = $_POST['bid'];
+    $sql_statement = "DELETE FROM busses WHERE bid = $selection_id";
     $result = mysqli_query($db, $sql_statement);
 
     header("Location: index.php");
@@ -13,3 +13,4 @@ if(!empty($_POST['cid'])){
 else {
     echo "Not selected any id!";
 }
+

@@ -11,9 +11,8 @@ if(!empty($_POST['plate'])){
     $is_socket = $_POST['is_socket'];
 
     $sql_statement = "INSERT INTO busses(plate, brand, bus_year, capacity, is_wifi, is_socket) VALUES ('$plate', '$brand', $bus_year, $capacity, '$is_wifi', '$is_socket')";
-    echo "<h2>" . $sql_statement . "</h2>";
     $result = mysqli_query($db, $sql_statement);
-    //header("Location: index.php");
+    header("Location: index.php");
 }
 
 else{
