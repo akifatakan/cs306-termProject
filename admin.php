@@ -61,5 +61,21 @@
             </select>
             <button class="button-7" style="background: red">DELETE</button>
         </form>
+        <?php include "trips.php"; ?>
+        <form action="deleteTrip.php" method="POST">
+            <select name="bid">
+                <?php
+
+                $sql_command = "SELECT bid FROM busses";
+                $myresult = mysqli_query($db, $sql_command);
+
+                while($id_rows = mysqli_fetch_assoc($myresult)){
+                    $bid = $id_rows['bid'];
+                    echo "<option value=$bid>" . $bid . "</option>";
+                }
+                ?>
+            </select>
+            <button class="button-7" style="background: red">DELETE</button>
+        </form>
     </body>
 </html>

@@ -17,6 +17,12 @@
             <li class="active left">
                 <a href="javascript:void('home.html');">Home</a>
             </li>
+            <li class="left">
+                <a href="javascript:void('buyTickets.php');">Buy Tickets</a>
+            </li>
+            <li class="left">
+                <a href="javascript:void('tripForm.php');">Add Trips</a>
+            </li>
             <li >
                 <a href="javascript:void('customerForm.php');"></i>New Customer</a>
             </li>
