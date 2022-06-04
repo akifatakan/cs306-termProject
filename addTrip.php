@@ -14,7 +14,7 @@ if(!empty($_POST['price'])){
      $sql_statement = "INSERT INTO trips(price, startdate, arrivaldate, isService, bid, startslid, endslid) VALUES ('$price', '$start_date', '$arrival_date', '$isService', $bid, $starts_lid, $ends_lid)";
 
      $result = mysqli_query($db, $sql_statement);
-     header("Location: trips.php");
+     header("Location: index.php");
 }
 
 else{

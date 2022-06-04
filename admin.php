@@ -63,19 +63,52 @@
         </form>
         <?php include "trips.php"; ?>
         <form action="deleteTrip.php" method="POST">
-            <select name="bid">
+            <select name="trid">
                 <?php
 
-                $sql_command = "SELECT bid FROM busses";
+                $sql_command = "SELECT trid FROM trips";
                 $myresult = mysqli_query($db, $sql_command);
 
                 while($id_rows = mysqli_fetch_assoc($myresult)){
-                    $bid = $id_rows['bid'];
-                    echo "<option value=$bid>" . $bid . "</option>";
+                    $trid = $id_rows['trid'];
+                    echo "<option value=$trid>" . $trid . "</option>";
                 }
                 ?>
             </select>
             <button class="button-7" style="background: red">DELETE</button>
+        </form>
+        <form action="addWorksinRelation.php" method="POST">
+
+            <select name="wid">
+                <?php
+
+                $sql_command = "SELECT * FROM workers";
+                $myresult = mysqli_query($db, $sql_command);
+
+                while($id_rows = mysqli_fetch_assoc($myresult)){
+                    $wid = $id_rows['wid'];
+                    $name = $id_rows['worker_name'];
+                    $sname = $id_rows['worker_surname'];
+                    $show =  $wid . ' ' . $name . ' '. $sname;
+                    echo "<option value=$wid>" . $show . "</option>";
+                }
+                ?>
+               
+            
+            </select>
+            <select name="trid" style="display:inline-block;width: 25%;">
+                <?php
+
+                $sql_command = "SELECT trid FROM trips";
+                $myresult = mysqli_query($db, $sql_command);
+
+                while($id_rows = mysqli_fetch_assoc($myresult)){
+                    $trid = $id_rows['trid'];
+                    echo "<option value=$trid>" . $trid . "</option>";
+                }
+                ?>
+            </select>
+            <button class="button-7" style="background: green">Add Worksin Relation</button>
         </form>
     </body>
 </html>

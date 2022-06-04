@@ -16,10 +16,10 @@
                 <input type="text" id="price" name="price" placeholder="Type price.."><br>
 
                 <label for="start_date">Start Date</label><br>
-                <input type="date" id="start_date" name="start_date" placeholder="Type start date.."><br>
+                <input type="datetime-local" id="start_date" name="start_date" placeholder="Type start date.."><br>
 
                 <label for="arrival_date">End Date</label><br>
-                <input type="date" id="arrival_date" name="arrival_date" placeholder="Type end_date.."><br>
+                <input type="datetime-local" id="arrival_date" name="arrival_date" placeholder="Type end_date.."><br>
 
                 <label for="isService">Does Include Service</label><br>
                 <select id="isService" name="isService"><br>

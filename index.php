@@ -26,21 +26,15 @@
             <li >
                 <a href="javascript:void('customerForm.php');"></i>New Customer</a>
             </li>
-            <li >
-                <a href="javascript:void('customers.php');">See Customers</a>
-            </li>
+            
            <li >
                 <a href="javascript:void('workerForm.php');"></i>New Worker</a>
             </li>
-            <li >
-                <a href="javascript:void('workers.php');">See Workers</a>
-            </li>
+            
             <li >
                 <a href="javascript:void('busForm.php');"></i>New Bus</a>
             </li>
-            <li >
-                <a href="javascript:void('busses.php');">See Busses</a>
-            </li>
+            
             <li>
                 <a href="javascript:void('admin.php');">Admin Page</a>
             </li>
