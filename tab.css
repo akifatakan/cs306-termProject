@@ -2,6 +2,26 @@
     display: none;
     animation: fadeEffect 1s;
 }
+#tab--content__workers {
+    display: none;
+    animation: fadeEffect 1s;
+}
+#tab--content__busses {
+    display: none;
+    animation: fadeEffect 1s;
+}
+#tab--content__trips {
+    display: none;
+    animation: fadeEffect 1s;
+}
+#tab--content__tickets {
+    display: none;
+    animation: fadeEffect 1s;
+}
+#tab--content__locations {
+    display: none;
+    animation: fadeEffect 1s;
+}
 .form-div{
     display: flex;
     flex-direction: row;

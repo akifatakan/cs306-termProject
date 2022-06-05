@@ -1,6 +1,6 @@
-#content input[type=text],
-#content input[type=number],
-#content select {
+ input[type=text],
+ input[type=number],
+ select {
     width: 50%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -9,8 +9,7 @@
     border-radius: 4px;
     box-sizing: border-box;
 }
-
-#content input[type=submit] {
+input[type=submit] {
     width: 50%;
     background-color: #4CAF50;
     color: white;
@@ -21,39 +20,39 @@
     cursor: pointer;
 }
 
-#content input[type=submit]:hover {
+input[type=submit]:hover {
     background-color: #45a049;
 }
 
 #content {
     border-radius: 5px;
 }
-#content div{
+div{
     border-radius: 5px;
 }
-#content textarea {
+textarea {
     width: 99%;
     height: 50px;
 }
 
-#content label {
+label {
     text-align: left;
 }
 
-#content table {
+table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
 
-#content td,
+td,
 th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
 }
 
-#content tr:nth-child(even) {
+tr:nth-child(even) {
     background-color: #dddddd;
 }
 .button-7 {

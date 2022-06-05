@@ -19,8 +19,6 @@
         <div id="tab--content">
             <form id="filter--form" action="<?php echo URL; ?>" method="post">
             
-                <label for="click">I want to enter id range</label>
-                <input id="idCheckbox" name="click" type="checkbox"/>
                 <div id="filter--form__id" class="clearfix form-div active" >
                     <div class="label-div">
                         <label for="cid">Customer ID:</label>
@@ -75,8 +73,6 @@
                         <option value="en">Ends with</option>
                     </select>                 
                 </div>
-                <label for="click">I want to enter age range</label>
-                <input id="ageCheckbox" name="click" type="checkbox"/>
                 <div id="filter--form__age" class="clearfix form-div filter--form__age active">
                     <div class="label-div">
                     <label for="cid">Age:</label>
@@ -149,7 +145,7 @@
                         <option value="en">Ends with</option>
                     </select>
                 </div>
-                <input type="submit" name="search" value="Filter"><br><br>
+                <input type="submit" name="search_customers" value="Filter"><br><br>
             </form>
         </div>
         

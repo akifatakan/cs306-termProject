@@ -15,9 +15,9 @@
     </head>
     <body align="center">
         <h1>BUSSES</h1><br><br>
-        <button class="tablink button-7" onclick="tabFilter()">Press if you want to filter!</button>
-        <div id="tab--content">
-            <form id="filter--form" action="<?php echo URL; ?>" method="post">
+        <button class="tablink button-7" onclick="tabFilterBusses()">Press if you want to filter!</button>
+        <div id="tab--content__busses">
+            <form id="filter--form__busses" action="<?php echo URL; ?>" method="post">
 
                 <label for="click">I want to enter id range</label>
                 <input id="idCheckbox" name="click" type="checkbox"/>
@@ -135,7 +135,7 @@
 
 
 
-                <input type="submit" name="search" value="Filter"><br><br>
+                <input type="submit" name="search_busses" value="Filter"><br><br>
             </form>
         </div>
 

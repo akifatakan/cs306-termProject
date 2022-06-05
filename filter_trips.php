@@ -3,7 +3,7 @@
 
 
 
-    if(isset($_POST["search"]))
+    if(isset($_POST["search_trips"]))
     {
         $add_AND = false;
         $add_WHERE = false;
@@ -12,7 +12,7 @@
 
         foreach($_POST as $key=>$var)
         {
-            if($key != "search" && $key != "click" && $key != "cage" && !strpos($key,"option") && !strpos($key,"2"))
+            if($key != "search_trips" && $key != "click" && $key != "cage" && !strpos($key,"option") && !strpos($key,"2"))
             {
 
                 if(($key === "cid"  &&!empty($_POST["cid"])) || ($key ==="age" && !empty($_POST["age"])))

@@ -15,19 +15,19 @@
     </head>
     <body align="center">
         <h1>Trips</h1><br><br>
-        <button class="tablink button-7" onclick="tabFilter()">Press if you want to filter!</button>
-        <div id="tab--content">
-            <form id="filter--form" action="<?php echo URL; ?>" method="post">
+        <button class="tablink button-7" onclick="tabFilterTrips()">Press if you want to filter!</button>
+        <div id="tab--content__trips">
+            <form id="filter--form__trips" action="<?php echo URL; ?>" method="post">
 
                 <label for="click">I want to enter id range</label>
                 <input id="idCheckbox" name="click" type="checkbox"/>
                 <div id="filter--form__id" class="clearfix form-div active" >
                     <div class="label-div">
-                        <label for="cid">Bus ID:</label>
+                        <label for="trid">Trip ID:</label>
 
                     </div>
-                    <input type="text" name="bid" placeholder="1">
-                    <select name="bid-option" id="bid-option">
+                    <input type="text" name="trid" placeholder="1">
+                    <select name="trid-option" id="trid-option">
                         <option value="=">Equals to</option>
                         <option value=">">Greater than</option>
                         <option value="<">Less than</option>
@@ -38,23 +38,23 @@
                 </div>
                 <div id="filter--form__id2" class="clearfix form-div">
                     <div class="label-div">
-                    <label for="cid">Bus ID:</label>
+                    <label for="price">Price</label>
 
                     </div>
-                    <input type="text" name="bid1" placeholder="1">
+                    <input type="text" name="price1" placeholder="1">
                     <span> - </span>
-                    <input type="text" name="bid2" placeholder="53">
+                    <input type="text" name="price2" placeholder="53">
 
                 </div>
                 <div class="clearfix form-div">
                     <div class="label-div">
-                    <label for="cid">Name:</label>
+                    <label for="startdate">Start Date:</label>
 
                     </div>
 
 
-                    <input type="text" name="plate" placeholder="34ATA34">
-                    <select name="plate-option" id="plate-option">
+                    <input type="text" name="startdate" placeholder="24/10/2022">
+                    <select name="startdate-option" id="startdate-option">
                         <option value="c">Contains</option>
                         <option value="eq">Equals to</option>
                         <option value="s">Starts with</option>
@@ -63,57 +63,58 @@
                 </div>
                 <div class="clearfix form-div">
                     <div class="label-div">
-                    <label for="cid">Surname:</label>
+                    <label for="arrivaldate">Arrival Date:</label>
 
                     </div>
 
-                    <input type="text" name="brand" placeholder="MAN">
-                    <select name="brand-option" id="brand-option">
+                    <input type="text" name="arrivaldate" placeholder="24/10/2022">
+                    <select name="arrivaldate-option" id="arrivaldate-option">
                         <option value="c">Contains</option>
                         <option value="eq">Equals to</option>
                         <option value="s">Starts with</option>
                         <option value="en">Ends with</option>
                     </select>
                 </div>
-                <label for="click">I want to enter year range</label>
-                <input id="yearCheckbox" name="click" type="checkbox"/>
                 <div id="filter--form__bus_year" class="clearfix form-div filter--form__bus_year active">
                     <div class="label-div">
-                    <label for="cid">Year:</label>
+                    <label for="isService">Year:</label>
 
                     </div>
 
 
-                    <input type="text" name="bus_year" placeholder="2016">
-                    <select name="bus_year-option" id="bus_year-option">
+                    <input type="text" name="isService" placeholder="1 or 0">
+                    <select name="isService-option" id="isService-option">
+                        <option value="=">Equals to</option>
+                    </select>
+                </div>
+                
+
+                <div id="filter--form__capacity" class="clearfix form-div filter--form__capacity active">
+                    <div class="label-div">
+                    <label for="bid">Bus ID:</label>
+
+                    </div>
+
+
+                    <input type="text" name="bid" placeholder="20">
+                    <select name="bid-option" id="bid-option">
                         <option value="=">Equals to</option>
                         <option value=">">Greater than</option>
                         <option value="<">Less than</option>
                         <option value=">=">Greater or Equals to</option>
                         <option value="<=">Less or Equals to</option>
                     </select>
-                </div>
-                <div id="filter--form__bus_year2" class="clearfix form-div">
-                    <div class="label-div">
-                    <label for="cid">Year Range:</label>
-
-                    </div>
-
-                    <input type="text" name="bus_year1" placeholder="2000">
-                    <span> - </span>
-                    <input type="text" name="bus_year2" placeholder="2020">
-
                 </div>
 
                 <div id="filter--form__capacity" class="clearfix form-div filter--form__capacity active">
                     <div class="label-div">
-                    <label for="cid">Year:</label>
+                    <label for="startslid">Start location ID:</label>
 
                     </div>
 
 
-                    <input type="text" name="capacity" placeholder="2016">
-                    <select name="capacity-option" id="capacity-option">
+                    <input type="text" name="startslid" placeholder="20">
+                    <select name="startslid-option" id="startslid-option">
                         <option value="=">Equals to</option>
                         <option value=">">Greater than</option>
                         <option value="<">Less than</option>
@@ -121,21 +122,27 @@
                         <option value="<=">Less or Equals to</option>
                     </select>
                 </div>
-                <div id="filter--form__capacity2" class="clearfix form-div">
+                <div id="filter--form__capacity" class="clearfix form-div filter--form__capacity active">
                     <div class="label-div">
-                    <label for="cid">Capacity Range:</label>
+                    <label for="endslid">End location ID:</label>
 
                     </div>
 
-                    <input type="text" name="capacity1" placeholder="2000">
-                    <span> - </span>
-                    <input type="text" name="capacity2" placeholder="2020">
 
+                    <input type="text" name="endslid" placeholder="20">
+                    <select name="endslid-option" id="endslid-option">
+                        <option value="=">Equals to</option>
+                        <option value=">">Greater than</option>
+                        <option value="<">Less than</option>
+                        <option value=">=">Greater or Equals to</option>
+                        <option value="<=">Less or Equals to</option>
+                    </select>
                 </div>
+                
 
 
 
-                <input type="submit" name="search" value="Filter"><br><br>
+                <input type="submit" name="search_trips" value="Filter"><br><br>
             </form>
         </div>
 

@@ -8,6 +8,7 @@
     <head>
         <title>Admin Page</title>
         <link rel="stylesheet" href="styles.css">
+        <link rel ="stylesheet" href="tab.css">
     </head>
     <body>
         <?php include "config.php";?>
@@ -109,6 +110,39 @@
                 ?>
             </select>
             <button class="button-7" style="background: green">Add Worksin Relation</button>
+
+        </form>
+        <?php include "tickets.php"; ?>
+        <form action="deleteTicket.php" method="POST">
+            <select name="tid">
+                <?php
+
+                $sql_command = "SELECT tid FROM tickets";
+                $myresult = mysqli_query($db, $sql_command);
+
+                while($id_rows = mysqli_fetch_assoc($myresult)){
+                    $trid = $id_rows['tid'];
+                    echo "<option value=$trid>" . $trid . "</option>";
+                }
+                ?>
+            </select>
+            <button class="button-7" style="background: red">DELETE</button>
+        </form>
+        <?php include "locations.php"; ?>
+        <form action="deleteLocation.php" method="POST">
+            <select name="lid">
+                <?php
+
+                $sql_command = "SELECT lid FROM locations";
+                $myresult = mysqli_query($db, $sql_command);
+
+                while($id_rows = mysqli_fetch_assoc($myresult)){
+                    $lid = $id_rows['lid'];
+                    echo "<option value=$trid>" . $lid . "</option>";
+                }
+                ?>
+            </select>
+            <button class="button-7" style="background: red">DELETE</button>
         </form>
     </body>
 </html>

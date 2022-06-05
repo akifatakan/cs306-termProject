@@ -5,7 +5,7 @@ function addAndToQ($state)
     $state = "".$state." AND";
     return $state;
 }
-    if(isset($_POST["search"]))
+    if(isset($_POST["search_customers"]))
     {
         $add_AND = false;
         $add_WHERE = false;
@@ -14,7 +14,7 @@ function addAndToQ($state)
         
         foreach($_POST as $key=>$var)
         {
-            if($key != "search" && $key != "click" && $key != "cage" && !strpos($key,"option") && !strpos($key,"2"))
+            if($key != "search_customers" && $key != "click" && $key != "cage" && !strpos($key,"option") && !strpos($key,"2"))
             {
                 
                 if(($key === "cid"  &&!empty($_POST["cid"])) || ($key ==="age" && !empty($_POST["age"])))
@@ -79,8 +79,8 @@ function addAndToQ($state)
         {
             $sql_statement = $sql_statement." WHERE ".$filter_states;
         }
-        // throw new ErrorException($sql_statement);
-        $result = mysqli_query($db, $sql_statement);
+        //  throw new ErrorException($sql_statement);
+         $result = mysqli_query($db, $sql_statement);
         
     }
     else{

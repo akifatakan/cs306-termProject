@@ -3,19 +3,19 @@
 
 
 
-    if(isset($_POST["search_busses"]))
+    if(isset($_POST["search_locations"]))
     {
         $add_AND = false;
         $add_WHERE = false;
-        $sql_statement = "SELECT * FROM busses";
+        $sql_statement = "SELECT * FROM locations";
         $filter_states = "";
 
         foreach($_POST as $key=>$var)
         {
-            if($key != "search_busses" && $key != "click" && $key != "cage" && !strpos($key,"option") && !strpos($key,"2"))
+            if($key != "search_locations" && $key != "click" && $key != "cage" && !strpos($key,"option") && !strpos($key,"2"))
             {
 
-                if(($key === "cid"  &&!empty($_POST["cid"])) || ($key ==="age" && !empty($_POST["age"])))
+                if(($key === "lid"  &&!empty($_POST["lid"])) || ($key ==="age" && !empty($_POST["age"])))
                 {
                     if($add_AND)
                     {
@@ -27,8 +27,8 @@
                     $add_AND = true;
                     $add_WHERE = true;
                 }
-                else if($key ==="cid1" || $key == "cid2" || $key ==="age1" || $key ==="age2"){
-                    if($key ==="cid1" && !empty($_POST["cid1"]) || ($key ==="age1" && !empty($_POST["age1"]))){
+                else if($key ==="lid1" || $key == "lid2" ){
+                    if($key ==="cid1" && !empty($_POST["cid1"])){
                         $keysubstr =  mb_substr($key, 0, 3);
                         if($add_AND)
                         {
@@ -83,7 +83,7 @@
     }
     else{
 
-        $sql_statement = "SELECT * FROM busses";
+        $sql_statement = "SELECT * FROM locations";
         $result = mysqli_query($db, $sql_statement);
     }
 

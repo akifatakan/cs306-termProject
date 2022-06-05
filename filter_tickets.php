@@ -3,16 +3,16 @@
 
 
 
-    if(isset($_POST["search_busses"]))
+    if(isset($_POST["search_tickets"]))
     {
         $add_AND = false;
         $add_WHERE = false;
-        $sql_statement = "SELECT * FROM busses";
+        $sql_statement = "SELECT * FROM tickets";
         $filter_states = "";
 
         foreach($_POST as $key=>$var)
         {
-            if($key != "search_busses" && $key != "click" && $key != "cage" && !strpos($key,"option") && !strpos($key,"2"))
+            if($key != "search_tickets" && $key != "click" && $key != "cage" && !strpos($key,"option") && !strpos($key,"2"))
             {
 
                 if(($key === "cid"  &&!empty($_POST["cid"])) || ($key ==="age" && !empty($_POST["age"])))
@@ -83,7 +83,7 @@
     }
     else{
 
-        $sql_statement = "SELECT * FROM busses";
+        $sql_statement = "SELECT * FROM tickets";
         $result = mysqli_query($db, $sql_statement);
     }
 

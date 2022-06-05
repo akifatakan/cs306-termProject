@@ -18,6 +18,9 @@
                 <a href="javascript:void('home.html');">Home</a>
             </li>
             <li class="left">
+                <a href="javascript:void('myTickets.php');">My Tickets</a>
+            </li>
+            <li class="left">
                 <a href="javascript:void('buyTickets.php');">Buy Tickets</a>
             </li>
             <li class="left">
@@ -34,7 +37,9 @@
             <li >
                 <a href="javascript:void('busForm.php');"></i>New Bus</a>
             </li>
-            
+            <li >
+                <a href="javascript:void('locationForm.php');"></i>New Location</a>
+            </li>
             <li>
                 <a href="javascript:void('admin.php');">Admin Page</a>
             </li>

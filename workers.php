@@ -15,19 +15,19 @@
     </head>
     <body align="center">
         <h1>WORKERS</h1><br><br>
-        <button class="tablink button-7" onclick="tabFilter()">Press if you want to filter!</button>
-        <div id="tab--content">
-            <form id="filter--form" action="<?php echo URL; ?>" method="post">
+        <button class="tablink button-7" onclick="tabFilterWorkers()">Press if you want to filter!</button>
+        <div id="tab--content__workers">
+            <form id="filter--form__workers" action="<?php echo URL; ?>" method="post">
 
                 <label for="click">I want to enter id range</label>
                 <input id="idCheckbox" name="click" type="checkbox"/>
                 <div id="filter--form__id" class="clearfix form-div active" >
                     <div class="label-div">
-                        <label for="cid">Worker ID:</label>
+                        <label for="wid">Worker ID:</label>
 
                     </div>
-                    <input type="text" name="cid" placeholder="1">
-                    <select name="cid-option" id="cid-option">
+                    <input type="text" name="wid" placeholder="1">
+                    <select name="wid-option" id="wid-option">
                         <option value="=">Equals to</option>
                         <option value=">">Greater than</option>
                         <option value="<">Less than</option>
@@ -38,17 +38,17 @@
                 </div>
                 <div id="filter--form__id2" class="clearfix form-div">
                     <div class="label-div">
-                    <label for="cid">Worker ID:</label>
+                    <label for="wid">Worker ID:</label>
 
                     </div>
-                    <input type="text" name="cid1" placeholder="1">
+                    <input type="text" name="wid1" placeholder="1">
                     <span> - </span>
-                    <input type="text" name="cid2" placeholder="53">
+                    <input type="text" name="wid2" placeholder="53">
 
                 </div>
                 <div class="clearfix form-div">
                     <div class="label-div">
-                    <label for="cid">Name:</label>
+                    <label for="worker_name">Name:</label>
 
                     </div>
 
@@ -63,7 +63,7 @@
                 </div>
                 <div class="clearfix form-div">
                     <div class="label-div">
-                    <label for="cid">Surname:</label>
+                    <label for="worker_surname">Surname:</label>
 
                     </div>
 
@@ -95,7 +95,7 @@
                 </div>
                 <div id="filter--form__age2" class="clearfix form-div">
                     <div class="label-div">
-                    <label for="cid">Age Range:</label>
+                    <label for="age">Age Range:</label>
 
                     </div>
 
@@ -106,7 +106,7 @@
                 </div>
                 <div class="clearfix form-div">
                     <div class="label-div">
-                    <label for="cid">SSN:</label>
+                    <label for="worker_ssn">SSN:</label>
 
                     </div>
 
@@ -121,7 +121,7 @@
                 </div>
                 <div id="filter--form__salary" class="clearfix form-div filter--form__salary active">
                     <div class="label-div">
-                    <label for="wid">Salary:</label>
+                    <label for="salary">Salary:</label>
 
                     </div>
 
@@ -137,7 +137,7 @@
                 </div>
                 <div id="filter--form__salary2" class="clearfix form-div">
                     <div class="label-div">
-                    <label for="wid">Age Range:</label>
+                    <label for="salary1">Age Range:</label>
 
                     </div>
 
@@ -146,7 +146,7 @@
                     <input type="text" name="salary2" placeholder="7000">
 
                 </div>
-                <input type="submit" name="search" value="Filter"><br><br>
+                <input type="submit" name="search_workers" value="Filter"><br><br>
             </form>
         </div>
 
