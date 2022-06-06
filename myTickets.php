@@ -41,6 +41,13 @@
             
         ?>
        </form>;
+
+       <?php
+            $sql = "SHOW CREATE TABLE trips";
+            $result = mysqli_query($db, $sql_statement);
+            $row = mysqli_fetch_assoc($result);
+            echo $row;
+        ?>
        <table>
             <tr>
                 <th>TID</th>
