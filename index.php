@@ -40,8 +40,14 @@
             <li >
                 <a href="javascript:void('locationForm.php');"></i>New Location</a>
             </li>
+            <li >
+                <a href="javascript:void('support.php');"></i>Support</a>
+            </li>
             <li>
                 <a href="javascript:void('admin.php');">Admin Page</a>
+            </li>
+            <li>
+                <a href="adminsupport.php">Admin Support</a>
             </li>
             </ul>
         </div>

@@ -13,7 +13,7 @@
     <body>
         <?php include "config.php";?>
         
-        
+        <a href="adminsupport.php"><button class="button-7" role="button">Support</button></a>
         <?php include "customers.php"; ?>
         <form action="deleteCustomer.php" method="POST">
             <select name="cid">
